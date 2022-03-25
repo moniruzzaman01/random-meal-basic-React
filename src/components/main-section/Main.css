@@ -1,4 +1,5 @@
 .main {
+  margin: 20px;
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
@@ -6,4 +7,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    grid-template-columns: 2fr 1fr;
+  }
+  .main .meals {
+    grid-template-columns: 1fr;
+  }
 }
