@@ -8,6 +8,13 @@
   top: 10px;
   text-align: center;
 }
+.cart li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 2px 0;
+  width: 95%;
+  border-radius: 5px;
+}
 .cart button {
   border: 1px solid #fff;
   padding: 8px 20px;

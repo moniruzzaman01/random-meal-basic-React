@@ -3,8 +3,8 @@ import "./Meal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-function Meal({ meal }) {
-  console.log(meal);
+function Meal({ meal, addCartbtnHandle }) {
+  // console.log(meal);
   const { idMeal, strMeal, strMealThumb, price } = meal;
   return (
     <div className="meal">
@@ -14,7 +14,7 @@ function Meal({ meal }) {
         <p>ID: {idMeal}</p>
         <p>Price: {price} </p>
       </div>
-      <button>
+      <button onClick={() => addCartbtnHandle(meal)}>
         Add to cart
         <FontAwesomeIcon icon={faShoppingCart} />
       </button>
