@@ -1,5 +1,7 @@
 import React from "react";
 import "./Meal.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function Meal({ meal }) {
   console.log(meal);
@@ -12,7 +14,10 @@ function Meal({ meal }) {
         <p>ID: {idMeal}</p>
         <p>Price: {price} </p>
       </div>
-      <button>Add to cart</button>
+      <button>
+        Add to cart
+        <FontAwesomeIcon icon={faShoppingCart} />
+      </button>
     </div>
   );
 }
