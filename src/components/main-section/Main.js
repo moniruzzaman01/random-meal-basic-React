@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Answers from "../answers/Answers";
 import Cart from "../cart/Cart";
 import Meal from "../meal/Meal";
 import "./Main.css";
@@ -40,21 +41,24 @@ function Main() {
   };
 
   return (
-    <div className="main">
-      <div className="meals">
-        {meals.map((meal, key) => (
-          <Meal
-            key={key}
-            meal={meal}
-            addCartbtnHandle={addCartbtnHandle}
-          ></Meal>
-        ))}
+    <div className="main-container">
+      <div className="main">
+        <div className="meals">
+          {meals.map((meal, key) => (
+            <Meal
+              key={key}
+              meal={meal}
+              addCartbtnHandle={addCartbtnHandle}
+            ></Meal>
+          ))}
+        </div>
+        <Cart
+          cart={cart}
+          resetBtnHandle={resetBtnHandle}
+          RandomNumberGenerator={RandomNumberGenerator}
+        ></Cart>
       </div>
-      <Cart
-        cart={cart}
-        resetBtnHandle={resetBtnHandle}
-        RandomNumberGenerator={RandomNumberGenerator}
-      ></Cart>
+      <Answers></Answers>
     </div>
   );
 }
