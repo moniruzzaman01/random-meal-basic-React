@@ -1,4 +1,4 @@
-# Random meal created by shakib
+# Which One Tasty created by shakib
 
 live site: (https://random-meal-by-shakib.netlify.app/)
 

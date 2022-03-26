@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 
 function Cart({ cart, resetBtnHandle, RandomNumberGenerator }) {
-  console.log("from cart", cart.length);
+  // console.log("from cart", cart.length);
 
   return (
     <div className="cart-container">
@@ -11,7 +11,7 @@ function Cart({ cart, resetBtnHandle, RandomNumberGenerator }) {
         {cart.map((meal, key) => (
           <li key={key}>{meal.strMeal}</li>
         ))}
-        <button onClick={RandomNumberGenerator}>Select Random</button>
+        <button onClick={RandomNumberGenerator}>Choose Randomly</button>
         <br />
         <button onClick={resetBtnHandle}>Reset</button>
       </div>
